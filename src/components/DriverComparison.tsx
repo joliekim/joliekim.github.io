@@ -36,7 +36,7 @@ interface TeamDriversData {
 }
 
 const teamDriversData: TeamDriversData = {
-  "Red Bull": {
+  "Red Bull Racing": {
     drivers: [
       {
         name: "Max Verstappen",
