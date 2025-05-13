@@ -1,9 +1,9 @@
 function Misc() {
   return (
     <>
-      <div className="title">
+      {/* <div className="title">
         Miscellaneous
-      </div>
+      </div> */}
 
       {/* <div className="misc-content">
         <section className="misc-section">

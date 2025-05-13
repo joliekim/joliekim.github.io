@@ -31,7 +31,7 @@ function Home() {
         where I explore the intersection of physical and digital interaction in <a href="https://make.kaist.ac.kr/" target="_blank" rel="noreferrer">Make Lab </a> 
         led by Prof. <a href="https://make.kaist.ac.kr/andrea" target="_blank" rel="noreferrer">Andrea Bianchi</a>.<br />
         <br />
-        My work centers on developing interactive systems that support increased expressiveness, creativity 
+        My work centers on developing interactive systems and tools that support increased expressiveness, creativity 
         and enhanced productivity. <br />
         <br />
         Before joining KAIST, I earned a B.S. in <a href="https://cdmstudentcouncil1.wixsite.com/yonseicdm" target="_blank" rel="noreferrer">Culture and Design Management</a> from <a href="https://www.yonsei.ac.kr/en_sc/index.jsp" target="_blank" rel="noreferrer">Yonsei University</a>. I also gained professional experience working 

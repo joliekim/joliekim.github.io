@@ -1,9 +1,9 @@
 function Projects() {
   return (
     <>
-      <div className="title">
+      {/* <div className="title">
         Projects
-      </div>
+      </div> */}
 
       {/* <div className="projects-list">
         <div className="project-item">
