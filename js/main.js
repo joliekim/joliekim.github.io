@@ -1,5 +1,3 @@
-// Portfolio JavaScript - Vanilla JS for navigation and interactions
-
 (function() {
     'use strict';
 
@@ -132,6 +130,13 @@
             // Re-run accessibility setup for new content
             setupAccessibilityForNewContent();
             
+            // Setup toggle functionality for misc section
+            if (sectionId === 'misc') {
+                setTimeout(() => {
+                    setupToggleFunctionality();
+                }, 100);
+            }
+            
         } catch (error) {
             console.error(`Failed to load section ${sectionId}:`, error);
             
@@ -165,6 +170,50 @@
                 }
                 section.setAttribute('aria-labelledby', heading.id);
             }
+        });
+        
+        // Setup toggle functionality for curation items
+        setupToggleFunctionality();
+    }
+    
+    // Setup toggle functionality for curation sections
+    function setupToggleFunctionality() {
+        const toggleHeaders = document.querySelectorAll('.toggle-header');
+        
+        toggleHeaders.forEach(header => {
+            // Remove existing listeners to avoid duplicates
+            const newHeader = header.cloneNode(true);
+            header.parentNode.replaceChild(newHeader, header);
+            
+            newHeader.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-toggle');
+                const targetContent = document.getElementById(targetId);
+                
+                if (targetContent) {
+                    // Toggle active states
+                    this.classList.toggle('active');
+                    targetContent.classList.toggle('active');
+                }
+            });
+            
+            // Add keyboard support
+            newHeader.addEventListener('keydown', function(event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    this.click();
+                }
+            });
+            
+            // Make focusable
+            newHeader.setAttribute('tabindex', '0');
+            newHeader.setAttribute('role', 'button');
+            newHeader.setAttribute('aria-expanded', 'false');
+            
+            // Update aria-expanded when toggled
+            newHeader.addEventListener('click', function() {
+                const isExpanded = this.classList.contains('active');
+                this.setAttribute('aria-expanded', isExpanded.toString());
+            });
         });
     }
 
@@ -296,6 +345,13 @@
     } else {
         init();
     }
+
+    // Global function for blockchain section navigation
+    window.showBlockchainSection = function() {
+        setActiveNav('blockchain');
+        showSection('blockchain');
+        scrollToTop();
+    };
 
     // Expose functions for debugging (development only)
     if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
