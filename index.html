@@ -10,78 +10,11 @@
     <meta name="theme-color" content="#0a0a0a">
 </head>
 <body>
-    <!-- Main Container -->
-    <div class="container">
-        <!-- Left Sidebar -->
-        <aside class="sidebar">
-            <header class="header-section">
-                <h1 class="name"><a href="./index.html">Heeji Jolie Kim</a></h1>
-            </header>
 
-            <section class="intro-section">
-                <p class="intro-text">
-                    Hello! Heeji here ˗ˏˋ ´ˎ˗ (you can call me Jolie). Born in Korea, shaped by 🇰🇷🇨🇳🇨🇦🇬🇧, now based in Daejeon, South Korea.
-                </p>
-            </section>
-
-            <section class="social-section">
-                <div class="social-links">
-                    <a href="mailto:jolieheejikim@kaist.ac.kr" class="social-link" aria-label="Email">
-                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M2.08333 4.16667H22.9167V20.8333H2.08333V4.16667Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M22.9167 4.16667L12.5 14.5833L2.08333 4.16667" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                    <a href="https://linkedin.com/in/jolieheejikim" class="social-link" aria-label="LinkedIn">
-                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M21.875 3.125H3.125V21.875H21.875V3.125Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M7.8125 11.7188V17.1875" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M7.8125 7.8125V7.8125" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M12.5 17.1875V11.7188" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M17.1875 17.1875V14.0625C17.1875 12.7318 16.1307 11.7188 14.8438 11.7188C13.557 11.7188 12.5 12.7318 12.5 14.0625" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                    <a href="https://instagram.com/jolieheejikim" class="social-link" aria-label="Instagram">
-                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="2.08333" y="2.08333" width="20.8333" height="20.8333" rx="5.20833" stroke="currentColor" stroke-width="2"/>
-                            <path d="M17.1875 7.8125L17.1875 7.8125" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <circle cx="12.5" cy="12.5" r="4.16667" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </a>
-                    <span class="social-link disabled" aria-label="CV (Coming Soon)" style="cursor: not-allowed; opacity: 0.5;">
-                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="2" y="2" width="21" height="21" stroke="currentColor" stroke-width="2" fill="none"/>
-                            <text x="12.5" y="16" font-family="Arial, sans-serif" font-size="8" font-weight="bold" text-anchor="middle" fill="currentColor">CV</text>
-                        </svg>
-                    </span>
-                </div>
-            </section>
-
-            <section class="updates-section">
-                <h2 class="updates-title">: ̗̀➛ updates</h2>
-                <ul class="updates-list">
-                    <li class="update-item current">
-                        🇸🇪 Oct,Nov 2025 — Visiting <a href="https://www.kth.se/hct/mid/research/interaction-design/interaction-design-1.921484" target="_blank">KTH Interaction Design Team</a> for a month!
-                    </li>
-                    <li class="update-item">
-                        🇰🇷 Sep 2025 — Attending UIST2025 in Busan 🌊
-                    </li>
-                    <li class="update-item">
-                        🤞 Sep 2025 — Made my first submission to CHI 🫠
-                    </li>
-                    <li class="update-item">
-                        🇯🇵 Apr 2025 — Attending CHI2025 in Yokohama!
-                    </li>
-                    <li class="update-item">
-                        🇺🇸 Oct 2024 — Attending UIST2024 in Pittsburgh!
-                    </li>
-                </ul>
-            </section>
-        </aside>
-
-        <!-- Main Content Area -->
-        <main class="main-content">
-            <!-- Top Navigation -->
+    <!-- Top Header Bar -->
+    <header class="site-header">
+        <div class="header-inner">
+            <h1 class="name"><a href="./index.html">Heeji Jolie Kim</a></h1>
             <nav class="top-nav">
                 <ul class="nav-list">
                     <li><a href="#about" class="nav-link active">about</a></li>
@@ -90,90 +23,160 @@
                     <li><a href="#misc" class="nav-link">misc</a></li>
                 </ul>
             </nav>
+        </div>
+    </header>
 
-            <!-- Hero Section -->
+    <!-- Single Column Container -->
+    <div class="container">
+        <main class="main-content">
+
+            <!-- About / Hero Section -->
             <section class="hero-section" id="about">
-                <div class="hero-content">
-                    <div class="hero-left-column">
-                        <div class="hero-image">
-                            <img src="./image/hero.png" alt="Heeji Jolie Kim" style="width: 50%; height: auto;" />
+                <div class="about-layout">
+
+                    <!-- Left: Updates (always visible) -->
+                    <aside class="updates-sidebar">
+                        <h4 class="updates-title">Updates</h4>
+                        <ul class="updates-list">
+                            <li class="update-item current">
+                                🥳 Got my conditional acceptance to C&C 2026 for my paper!
+                            </li>
+                            <li class="update-item">
+                                🇸🇪 Oct,Nov 2025 — Visiting <a href="https://www.kth.se/hct/mid/research/interaction-design/interaction-design-1.921484" target="_blank">KTH Interaction Design Team</a> for a month!
+                            </li>
+                            <li class="update-item">
+                                🇰🇷 Sep 2025 — Attending UIST2025 in Busan 🌊
+                            </li>
+                            <li class="update-item">
+                                🤞 Sep 2025 — Made my first submission to CHI 🫠
+                            </li>
+                            <li class="update-item">
+                                🇯🇵 Apr 2025 — Attending CHI2025 in Yokohama!
+                            </li>
+                            <li class="update-item">
+                                🇺🇸 Oct 2024 — Attending UIST2024 in Pittsburgh!
+                            </li>
+                        </ul>
+                        <div class="social-links">
+                            <a href="mailto:jolieheejikim@kaist.ac.kr" class="social-link" aria-label="Email">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.08333 4.16667H22.9167V20.8333H2.08333V4.16667Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M22.9167 4.16667L12.5 14.5833L2.08333 4.16667" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                            <a href="https://linkedin.com/in/jolieheejikim" class="social-link" aria-label="LinkedIn">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21.875 3.125H3.125V21.875H21.875V3.125Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.8125 11.7188V17.1875" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.8125 7.8125V7.8125" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12.5 17.1875V11.7188" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M17.1875 17.1875V14.0625C17.1875 12.7318 16.1307 11.7188 14.8438 11.7188C13.557 11.7188 12.5 12.7318 12.5 14.0625" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                            <a href="https://instagram.com/jolieheejikim" class="social-link" aria-label="Instagram">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2.08333" y="2.08333" width="20.8333" height="20.8333" rx="5.20833" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M17.1875 7.8125L17.1875 7.8125" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <circle cx="12.5" cy="12.5" r="4.16667" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </a>
+                            <span class="social-link disabled" aria-label="CV (Coming Soon)" style="cursor: not-allowed; opacity: 0.4;">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2" y="2" width="21" height="21" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <text x="12.5" y="16" font-family="Arial, sans-serif" font-size="8" font-weight="bold" text-anchor="middle" fill="currentColor">CV</text>
+                                </svg>
+                            </span>
                         </div>
-                        <div class="hero-text">
-                            <p>I am an HCI researcher and a MSc. candidate in the Department of <a href="https://id.kaist.ac.kr/" target="_blank"><strong>Industrial Design</strong> at <strong>KAIST</strong></a>, where I explore the intersection of physical and digital interaction in <a href="https://make.kaist.ac.kr/" target="_blank"><strong>Make Lab</strong></a> led by Prof. Andrea Bianchi.</p>
-                            <br>
-                            <p>My research seeks to transform <i>how</i> people engage with <strong>intelligent tools</strong>—particularly within the creative sector—by moving beyond monolithic human-AI systems toward granular, controllable, and composable interactions. So I build tools and systems that empower users throughout their creative processes.</p>
-                            <br>
-                            <p>Before joining KAIST, I earned my B.S. in Culture & Design Management from Yonsei University, working across AdTech and Blockchain, also founding an F&B startup.</p>
-                        </div>
-                    </div>
-                    <div class="hero-right-column">
-                        <p>✼　 ҉ 　✼　 ҉ 　✼</p>
-                        <br>
-                        <div class="experience-section">
-                            <h4>A glimpse of my CV</h4>
-                            <div class="timeline">
-                                <div class="timeline-item">
-                                    <span class="timeline-date">Fall 2024~</span>
-                                    <div class="timeline-content">
-                                        <strong>Graduate Researcher</strong>
-                                        KAIST, Daejeon, South Korea
-                                    </div>
-                                </div>
-                                <div class="timeline-item">
-                                    <span class="timeline-date">Spring 2024</span>
-                                    <div class="timeline-content">
-                                        <strong>Undergraduate Researcher</strong>
-                                        Yonsei University, Seoul, South Korea
-                                    </div>
-                                </div>
-                                <div class="timeline-item">
-                                    <span class="timeline-date">2022-2023</span>
-                                    <div class="timeline-content">
-                                        <strong>President of Blockchain at Yonsei</strong>
-                                        Yonsei University, Seoul, South Korea
-                                    </div>
-                                </div>
-                                <div class="timeline-item">
-                                    <span class="timeline-date">2022-2023</span>
-                                    <div class="timeline-content">
-                                        <strong>Growth Associate, GTM</strong>
-                                        <a href="https://www.moloco.com/" target="_blank">Moloco</a>, Seoul, South Korea
-                                    </div>
-                                </div>
-                                <div class="timeline-item">
-                                    <span class="timeline-date">2022</span>
-                                    <div class="timeline-content">
-                                        <strong>Klaytn API Service Intern</strong>
-                                        <a href="https://www.kaia.io/partners/groundx" target="_blank">GroundX (Kakao)</a>, Seoul, South Korea
-                                    </div>
-                                </div>
-                                <div class="timeline-item">
-                                    <span class="timeline-date">2021</span>
-                                    <div class="timeline-content">
-                                        <strong>Co-founder & Co-CEO</strong>
-                                        <a href="https://www.instagram.com/louiescreamery/" target="_blank">Louies Creamery (NOT BASIC)</a>, Seoul, South Korea
-                                    </div>
-                                </div>
-                                <div class="timeline-item">
-                                    <span class="timeline-date">2019-2020</span>
-                                    <div class="timeline-content">
-                                        <strong>Erasmus Year in Business Management</strong>
-                                        Durham University, Durham, United Kingdom
-                                    </div>
-                                </div>
-                                <div class="timeline-item">
-                                    <span class="timeline-date">2018-2024</span>
-                                    <div class="timeline-content">
-                                        <strong>Bachelor's in Culture and Design Management</strong>
-                                        Yonsei University, Seoul, South Korea
-                                    </div>
-                                </div>
+                    </aside>
+
+                    <!-- Right: Main about content -->
+                    <div class="about-main">
+                        <p class="intro-text">
+                            Hello ! I'm Heeji. Some people know me as Jolie. Born in Korea 🇰🇷, moved a lot 🇨🇳🇨🇦🇬🇧, came back. 
+                        </p>
+
+                        <div class="about-body">
+                            <div class="hero-image">
+                                <img src="./image/hero.jpg" alt="Heeji Jolie Kim" />
                             </div>
-                            <div class="cv-link">
-                                <a href="#" onclick="return false;" style="color: #999; cursor: not-allowed;">View my full CV here ︎︎︎︎</a>
+                            <div class="hero-text">
+                                <p>I am an HCI researcher and a MSc. candidate in the Department of <a href="https://id.kaist.ac.kr/" target="_blank"><strong>Industrial Design</strong> at <strong>KAIST</strong></a>, where I explore the intersection of physical and digital interaction in <a href="https://make.kaist.ac.kr/" target="_blank"><strong>Make Lab</strong></a> led by Prof. Andrea Bianchi.</p>
+                                <p>My research seeks to transform <i>how</i> people engage with <strong>intelligent tools</strong>—particularly within the creative sector—by moving beyond monolithic human-AI systems toward granular, controllable, and composable interactions. So I build tools and systems that empower users throughout their creative processes.</p>
+                                <p>Before joining KAIST, I earned my B.S. in Culture & Design Management from <a href="https://www.yonsei.ac.kr/" target="_blank"><strong>Yonsei University</strong></a>, working across AdTech and Blockchain, also founding an F&B startup.</p>
                             </div>
                         </div>
+
+                        <!-- Collapsible CV Timeline -->
+                        <div class="cv-toggle">
+                            <h4 class="toggle-header" data-toggle="cv-timeline">
+                                A glimpse of my CV <span class="toggle-icon">+</span>
+                            </h4>
+                            <div class="toggle-content" id="cv-timeline">
+                                <div class="timeline">
+                                    <div class="timeline-item">
+                                        <span class="timeline-date">Fall 2024~</span>
+                                        <div class="timeline-content">
+                                            <strong>Graduate Researcher</strong>
+                                            KAIST, Daejeon, South Korea
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-date">Spring 2024</span>
+                                        <div class="timeline-content">
+                                            <strong>Undergraduate Researcher</strong>
+                                            Yonsei University, Seoul, South Korea
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-date">2022-2023</span>
+                                        <div class="timeline-content">
+                                            <strong>President of Blockchain at Yonsei</strong>
+                                            Yonsei University, Seoul, South Korea
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-date">2022-2023</span>
+                                        <div class="timeline-content">
+                                            <strong>Growth Associate, GTM</strong>
+                                            <a href="https://www.moloco.com/" target="_blank">Moloco</a>, Seoul, South Korea
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-date">2022</span>
+                                        <div class="timeline-content">
+                                            <strong>Klaytn API Service Intern</strong>
+                                            <a href="https://www.kaia.io/partners/groundx" target="_blank">GroundX (Kakao)</a>, Seoul, South Korea
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-date">2021</span>
+                                        <div class="timeline-content">
+                                            <strong>Co-founder & Co-CEO</strong>
+                                            <a href="https://www.instagram.com/louiescreamery/" target="_blank">Louies Creamery (NOT BASIC)</a>, Seoul, South Korea
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-date">2019-2020</span>
+                                        <div class="timeline-content">
+                                            <strong>Erasmus Year in Business Management</strong>
+                                            Durham University, Durham, United Kingdom
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-date">2018-2024</span>
+                                        <div class="timeline-content">
+                                            <strong>Bachelor's in Culture and Design Management</strong>
+                                            Yonsei University, Seoul, South Korea
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cv-link">
+                                    <a href="#" onclick="return false;" style="color: #999; cursor: not-allowed;">View my full CV here</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </section>
 

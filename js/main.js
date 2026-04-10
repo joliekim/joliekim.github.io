@@ -17,7 +17,8 @@
         setupSmoothScrolling();
         setupAccessibility();
         setupCacheBusting();
-        
+        setupToggleFunctionality();
+
         console.log('Portfolio initialized successfully');
     }
     
