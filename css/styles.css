@@ -278,23 +278,41 @@ button:hover {
 }
 
 .window-project {
-    left: 11vw;
-    top: 18vh;
+    left: 9vw;
+    top: 15vh;
 }
 
 .window-bio {
     left: 50vw;
-    top: 16vh;
+    top: 14vh;
+}
+
+.priority-window.window-bio {
+    width: 490px;
+}
+
+.bio-extra {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 280ms ease;
+}
+
+.bio-extra.open {
+    max-height: 420px;
+}
+
+.bio-extra p:last-child {
+    margin-bottom: 0;
 }
 
 .window-research {
-    left: 31vw;
-    top: 51vh;
+    left: 9vw;
+    top: 50vh;
 }
 
 .window-status {
-    left: 14.2vw;
-    bottom: 22.2vh;
+    left: 43vw;
+    top: 64vh;
     width: 160px;
 }
 
@@ -323,7 +341,7 @@ button:hover {
 
 .window-lab {
     right: 7vw;
-    bottom: 23vh;
+    bottom: 15vh;
     width: 225px;
 }
 
@@ -691,6 +709,12 @@ button:hover {
     color: var(--muted);
     font-size: 10px;
     text-transform: uppercase;
+}
+
+.authors .author-highlight {
+    color: var(--blue);
+    font-weight: 700;
+    border-bottom: 1px solid var(--blue);
 }
 
 .abstract,

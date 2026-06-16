@@ -8,7 +8,7 @@
     
     // Cache for loaded sections
     const sectionCache = new Map();
-    const sectionVersion = 'terminal-2026-6';
+    const sectionVersion = 'terminal-2026-13';
     let dynamicSectionContainer = null;
 
     // Initialize the application
@@ -20,6 +20,7 @@
         setupCacheBusting();
         setupToggleFunctionality();
         setupAcknowledgePanel();
+        setupAboutToggle();
         handleHashChange();
 
         console.log('Portfolio initialized successfully');
@@ -471,6 +472,21 @@
             .replace(/&/g, '&amp;')
             .replace(/</g, '&lt;')
             .replace(/>/g, '&gt;');
+    }
+
+    // Expand/collapse the bio "about me" details on the home window
+    function setupAboutToggle() {
+        const btn = document.getElementById('about-toggle');
+        const extra = document.getElementById('bio-extra');
+        if (!btn || !extra) {
+            return;
+        }
+        btn.addEventListener('click', function(event) {
+            event.preventDefault();
+            const open = extra.classList.toggle('open');
+            btn.setAttribute('aria-expanded', String(open));
+            btn.textContent = open ? 'ABOUT_ME −' : 'ABOUT_ME +';
+        });
     }
 
     function setupAcknowledgePanel() {
