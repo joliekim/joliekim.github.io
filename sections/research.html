@@ -1,43 +1,104 @@
-<section class="content-section" id="research">
-    <div class="research-content">
-        <p>
-            My research focuses on the intersection of physical and digital interaction, particularly in creative workflows. I am also interested in productivity-enhancing technologies and their applications in everyday life ✧ ˚ ｡
-        </p>
-        <h3>Publications</h3>
-        <div class="publications-list">
+<section class="content-section term" id="research"
+         data-prompt="~/research" data-cmd="cat dossier.md"
+         data-boot="mounting /dev/research|indexing publications ... 1 record|loading focus_areas ... 3 mounted|stream ready">
+    <div class="term-bar">
+        <span class="term-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="term-bar-title">heeji@kaist: ~/research — bash — 80×24</span>
+        <span class="term-clock" data-clock aria-hidden="true">--:--:--</span>
+    </div>
 
-            <!-- <div class="publication-item">
-                <div class="publication-content">
-                    <h4>Enhancing Idea Generation through Component-Based Construction and Idea Integration</h4>
-                    <p class="venue">
-                        Under Review
-                    </p>
-                </div>
-            </div> -->
-
-            <div class="publication-item">
-                <div class="publication-year">2024</div>
-                <div class="publication-content">
-                    <h4>Investigating Work Companion Robot Interactions to Enhance Work-from-Home Productivity and Experience</h4>
-                    <p class="authors">
-                        <span class="author-highlight">Heeji Kim</span>, Bokyung Lee
-                    </p>
-                    <p class="venue">
-                        Archives of Design Research (AoDR Vol. 37, No. 4)
-                    </p>
-                    <p class="abstract">
-                        This study provides insights into how a tabletop robot companion influences the productivity of 
-                        knowledge workers in WFH settings. By evaluating Roby in real-world contexts, we identify key factors 
-                        that we hope can inform the design of future intelligent robot companions to optimize remote work 
-                        experiences across various professional domains.
-                    </p>
-                    <div class="publication-links">
-                        <a href="https://aodr.org/xml/41676/41676.pdf" target="_blank" rel="noreferrer">PDF</a>
-                        <span class="link-separator">·</span>
-                        <a href="https://doi.org/10.15187/adr.2024.08.37.4.43" target="_blank" rel="noreferrer">DOI</a>
-                    </div>
-                </div>
-            </div>
+    <div class="term-head">
+        <div class="term-boot" data-boot-out></div>
+        <div class="cmd-line">
+            <span class="cmd-ps1"><span class="ps-user">visitor@heeji</span>:<span class="ps-path">~/research</span>$</span>
+            <span class="cmd-typed" data-typed></span><span class="cmd-cursor" aria-hidden="true"></span>
         </div>
     </div>
+
+    <div class="term-body">
+        <div class="research-content">
+            <header class="doc-head">
+                <span class="section-kicker">// dossier.md</span>
+                <h2>Research</h2>
+                <p>Creative tools, physical-digital interaction, productivity systems, and human control over intelligent workflows.</p>
+            </header>
+
+            <!-- <div class="stat-strip" aria-label="Research stats">
+                <div><strong>01</strong><span>publication</span></div>
+                <div><strong>01</strong><span>C&amp;C2026 conditional accept</span></div>
+                <div><strong>KAIST</strong><span>Make Lab / Ind. Design</span></div>
+            </div> -->
+
+            <article class="research-thesis term-block">
+                <span class="block-tag">PRIMARY_THREAD</span>
+                <h3>How should people compose, steer, and inspect intelligent creative tools?</h3>
+                <p>My work moves beyond monolithic human-AI systems toward granular, controllable, and composable interactions that support the creative process instead of hiding it.</p>
+            </article>
+
+            <div class="ascii-rule" aria-hidden="true">$ ls ./focus_areas ──────────────────────────────────────────</div>
+
+            <div class="focus-grid">
+                <div class="focus-card">
+                    <span class="dir-line">drwxr-xr-x  interaction_material/</span>
+                    <h4>Interaction Material</h4>
+                    <p>Physical-digital systems, tangible interaction, and tool behaviors that make computational processes easier to grasp.</p>
+                </div>
+                <div class="focus-card">
+                    <span class="dir-line">drwxr-xr-x  creative_workflows/</span>
+                    <h4>Creative Workflows</h4>
+                    <p>Systems that help people ideate, structure, critique, and iterate with more control over intelligent assistance.</p>
+                </div>
+                <div class="focus-card">
+                    <span class="dir-line">drwxr-xr-x  everyday_productivity/</span>
+                    <h4>Everyday Productivity</h4>
+                    <p>Companion technologies and ambient support systems for work-from-home and daily knowledge work.</p>
+                </div>
+            </div>
+
+            <div class="ascii-rule" aria-hidden="true">$ cat ./publications/*.bib ───────────────────────────────────</div>
+
+            <article class="bib-entry">
+                <div class="bib-gutter">
+                    <span class="bib-year">2026</span>
+                    <span class="bib-type">@article</span>
+                </div>
+                <div class="bib-content">
+                    <h4>AtoMix: Fostering Structured Visual Ideation for Remote Groups through Atomic Composition and Cross-Pollination</h4>
+                    <p class="authors"><span class="author-highlight">Heeji Jolie Kim</span>, Anam Ahmad Khan, SeungHui Huh, Andrea Bianchi</p>
+                    <p class="venue">C&C '26: Creativity and Cognition</p>
+                    <p class="abstract">6-3-5 brainwriting is a structured group ideation method that produces many ideas quickly, but current generative tools struggle to support modular, visual, and collaborative idea development. AtoMix addresses this by enabling atomic prompting, reusable visual elements, and collaborative composition, resulting in more effective and fine-grained visual ideation compared to existing approaches.</p>
+                    <div class="bib-links">
+                        <a href="" target="_blank" rel="noreferrer">[ PDF ]</a>
+                        <a href="https://doi.org/10.1145/3803784.3807530" target="_blank" rel="noreferrer">[ DOI ]</a>
+                    </div>
+                </div>
+            </article>
+            <br>
+            <article class="bib-entry">
+                <div class="bib-gutter">
+                    <span class="bib-year">2024</span>
+                    <span class="bib-type">@article</span>
+                </div>
+                <div class="bib-content">
+                    <h4>Investigating Work Companion Robot Interactions to Enhance Work-from-Home Productivity and Experience</h4>
+                    <p class="authors"><span class="author-highlight">Heeji Kim</span>, Bokyung Lee</p>
+                    <p class="venue">Archives of Design Research — AoDR Vol. 37, No. 4</p>
+                    <p class="abstract">This study examines how a tabletop robot companion influences knowledge-worker productivity in work-from-home contexts. By evaluating Roby in real-world settings, the paper identifies factors that can inform future intelligent robot companions for remote work.</p>
+                    <div class="bib-links">
+                        <a href="https://aodr.org/xml/41676/41676.pdf" target="_blank" rel="noreferrer">[ PDF ]</a>
+                        <a href="https://doi.org/10.15187/adr.2024.08.37.4.43" target="_blank" rel="noreferrer">[ DOI ]</a>
+                    </div>
+                </div>
+            </article>
+
+
+        </div>
+    </div>
+
+    <form class="term-input" data-shell autocomplete="off">
+        <label class="ti-ps1"><span class="ps-user">visitor@heeji</span>:<span class="ps-path">~/research</span>$</label>
+        <input type="text" class="ti-field" data-shell-input spellcheck="false"
+               aria-label="Terminal command input" placeholder="type 'help' and hit enter">
+    </form>
+    <div class="term-log" data-shell-log aria-live="polite"></div>
 </section>
