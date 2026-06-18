@@ -8,7 +8,7 @@
     
     // Cache for loaded sections
     const sectionCache = new Map();
-    const sectionVersion = 'terminal-2026-13';
+    const sectionVersion = 'terminal-2026-14';
     let dynamicSectionContainer = null;
 
     // Initialize the application
@@ -21,6 +21,8 @@
         setupToggleFunctionality();
         setupAcknowledgePanel();
         setupAboutToggle();
+        setupWindowDragging();
+        startHomeClock();
         handleHashChange();
 
         console.log('Portfolio initialized successfully');
@@ -421,7 +423,6 @@
             }
             case 'whoami':
                 print('heeji jolie kim — HCI researcher @ KAIST Make Lab.', 'ok');
-                print('building granular, controllable, composable human-AI interactions.');
                 break;
             case 'pwd':
                 print((ctx.term.getAttribute('data-prompt') || '~').replace('~', '/home/heeji'));
@@ -472,6 +473,77 @@
             .replace(/&/g, '&amp;')
             .replace(/</g, '&lt;')
             .replace(/>/g, '&gt;');
+    }
+
+    // Live clock(s) on the home desktop windows
+    function startHomeClock() {
+        const els = document.querySelectorAll('.desktop-stage [data-clock]');
+        if (!els.length) {
+            return;
+        }
+        const pad = (n) => String(n).padStart(2, '0');
+        const tick = () => {
+            const now = new Date();
+            const t = `${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
+            els.forEach((el) => { el.textContent = t; });
+        };
+        tick();
+        setInterval(tick, 1000);
+    }
+
+    // Drag the home desktop windows by their title bar (free-floating layout)
+    function setupWindowDragging() {
+        const stage = document.querySelector('.desktop-stage');
+        if (!stage) {
+            return;
+        }
+        let zTop = 6;
+        stage.querySelectorAll('.system-window').forEach((win) => {
+            const bar = win.querySelector('.window-bar');
+            if (!bar) {
+                return;
+            }
+            bar.addEventListener('pointerdown', function(event) {
+                // left button only; disabled when windows are stacked (mobile)
+                if (event.button !== 0) {
+                    return;
+                }
+                if (getComputedStyle(win).position !== 'absolute') {
+                    return;
+                }
+                const winRect = win.getBoundingClientRect();
+                const stageRect = stage.getBoundingClientRect();
+                const offX = event.clientX - winRect.left;
+                const offY = event.clientY - winRect.top;
+
+                win.style.zIndex = ++zTop;
+                win.classList.add('dragging');
+                try { bar.setPointerCapture(event.pointerId); } catch (err) {}
+
+                const onMove = (ev) => {
+                    let nx = ev.clientX - stageRect.left - offX;
+                    let ny = ev.clientY - stageRect.top - offY;
+                    nx = Math.max(0, Math.min(nx, stage.clientWidth - win.offsetWidth));
+                    ny = Math.max(0, Math.min(ny, stage.clientHeight - win.offsetHeight));
+                    win.style.left = nx + 'px';
+                    win.style.top = ny + 'px';
+                    win.style.right = 'auto';
+                    win.style.bottom = 'auto';
+                };
+                const onUp = () => {
+                    win.classList.remove('dragging');
+                    try { bar.releasePointerCapture(event.pointerId); } catch (err) {}
+                    bar.removeEventListener('pointermove', onMove);
+                    bar.removeEventListener('pointerup', onUp);
+                    bar.removeEventListener('pointercancel', onUp);
+                };
+
+                bar.addEventListener('pointermove', onMove);
+                bar.addEventListener('pointerup', onUp);
+                bar.addEventListener('pointercancel', onUp);
+                event.preventDefault();
+            });
+        });
     }
 
     // Expand/collapse the bio "about me" details on the home window

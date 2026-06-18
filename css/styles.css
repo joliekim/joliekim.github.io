@@ -155,7 +155,9 @@ button:hover {
     top: 51%;
     z-index: 0;
     transform: translate(-50%, -50%);
-    color: var(--ghost);
+    color: transparent;
+    -webkit-text-stroke: 1.5px #e7e7e7;
+    text-stroke: 1.5px #e7e7e7;
     font-family: Arial, Helvetica, sans-serif;
     font-size: clamp(72px, 14vw, 220px);
     font-weight: 900;
@@ -190,9 +192,9 @@ button:hover {
 .window-bar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    min-height: 20px;
-    padding: 4px 7px;
+    gap: 8px;
+    min-height: 22px;
+    padding: 5px 9px;
     color: #fff;
     font-size: 9px;
     font-weight: 700;
@@ -203,6 +205,48 @@ button:hover {
     font-size: 8px;
     letter-spacing: 1px;
     white-space: nowrap;
+}
+
+/* terminal-style window chrome (matches subpage term-bar) */
+.win-dots {
+    display: inline-flex;
+    gap: 5px;
+    flex: 0 0 auto;
+}
+
+.win-dots i {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.45);
+}
+
+.win-dots i:nth-child(1) { background: #ff5f57; }
+.win-dots i:nth-child(2) { background: #febc2e; }
+.win-dots i:nth-child(3) { background: #28c840; }
+
+.win-title {
+    flex: 1 1 auto;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    opacity: 0.92;
+}
+
+.win-clock {
+    flex: 0 0 auto;
+    color: var(--term-green);
+    letter-spacing: 0.5px;
+}
+
+.status-cursor {
+    display: inline-block;
+    width: 8px;
+    height: 14px;
+    margin-left: 4px;
+    transform: translateY(2px);
+    background: var(--term-green);
+    animation: blink 1.1s steps(1) infinite;
 }
 
 .window-body {
@@ -326,16 +370,21 @@ button:hover {
     min-height: 70px;
     padding: 12px;
     text-align: center;
+    background: var(--term-bg);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.02) 50%, transparent 50%);
+    background-size: 100% 4px;
 }
 
 .status-body strong {
-    color: var(--blue);
+    display: inline-flex;
+    align-items: center;
+    color: var(--term-green);
     font-size: 16px;
     line-height: 1;
 }
 
 .status-body span {
-    color: var(--ink);
+    color: var(--term-dim);
     font-size: 7px;
 }
 
@@ -343,6 +392,24 @@ button:hover {
     right: 7vw;
     bottom: 15vh;
     width: 225px;
+}
+
+/* draggable windows (desktop free-floating layout only) */
+@media (min-width: 1101px) {
+    .desktop-stage .window-bar {
+        cursor: grab;
+        user-select: none;
+        touch-action: none;
+    }
+
+    .desktop-stage .system-window.dragging,
+    .desktop-stage .system-window.dragging .window-bar {
+        cursor: grabbing;
+    }
+
+    .desktop-stage .system-window.dragging {
+        box-shadow: 7px 7px 0 rgba(17, 17, 17, 0.12);
+    }
 }
 
 .priority-window {
