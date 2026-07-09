@@ -2,8 +2,8 @@
 const FUN_FACTS = [
     "“Jolie” is from Angelina Jolie — my parents are fans \u{1F3AC}",
     "quadrilingual: English, Korean, Chinese, and Japanese \u{1F5E3}️",
-    "winter sports person — snowboarding and figure skating ⛷️",
-    "coffee: a persistent dependency ☕",
+    "winter sports person; snowboarding and figure skating ⛷️",
+    "coffee flows in my blood... ☕",
     "passed my master's defense this year \u{1F393}",
 ];
 
