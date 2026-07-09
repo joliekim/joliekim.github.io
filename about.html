@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Heeji Jolie Kim - HCI Researcher at KAIST">
+    <title>about me &mdash; Heeji Jolie Kim</title>
+    <link rel="stylesheet" href="css/main.css?v=minimal-2026-5">
+    <link rel="icon" type="image/x-icon" href="./image/favicon.jpg">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <div class="page">
+        <a href="./" class="back-link">&larr; back</a>
+
+        <h1 class="about-title">about me <button type="button" class="sparkle" id="sparkle" aria-label="click for a surprise">&#10022;</button></h1>
+
+        <figure class="photo-frame">
+            <img src="./image/hero.png" alt="A collage of Heeji's everyday life" class="about-photo">
+        </figure>
+
+        <section class="section notes-section" id="notes">
+            <h2>off the clock <span class="sparkle-mini" aria-hidden="true">&#10022;</span></h2>
+            <p class="notes-tagline">Do what excites! Definitely a pro-dabbler and a serial beginner.</p>
+
+            <!-- Fun-fact cycler: edit the list in js/about.js (FUN_FACTS) to change captions -->
+            <button type="button" class="fact-pill" id="fact-pill">
+                <span id="fact-pill-text">click for a fun fact</span> <span aria-hidden="true">&rarr;</span>
+            </button>
+
+            <h3 class="notes-subhead">My favorites</h3>
+            <div class="curation-tabs" role="tablist">
+                <button type="button" class="tab-chip active" data-tab="books" role="tab" aria-selected="true">books</button>
+                <button type="button" class="tab-chip" data-tab="movies" role="tab" aria-selected="false">movies</button>
+                <button type="button" class="tab-chip" data-tab="artists" role="tab" aria-selected="false">artists</button>
+                <button type="button" class="tab-chip" data-tab="perfumes" role="tab" aria-selected="false">perfumes</button>
+            </div>
+            <ul class="curation-panel active" data-panel="books">
+                <li>Contradictions &mdash; Gwi-ja Yang</li>
+                <li>Siddhartha &mdash; Hermann Hesse</li>
+                <li>Convenience Store Woman &mdash; Sayaka Murata</li>
+            </ul>
+            <ul class="curation-panel" data-panel="movies" hidden>
+                <li>Monster &mdash; Hirokazu Kore-eda</li>
+                <li>Three Idiots &mdash; Rajkumar Hirani</li>
+                <li>Interstellar &mdash; Christopher Nolan</li>
+                <li>Gran Turismo &mdash; Neill Blomkamp</li>
+            </ul>
+            <ul class="curation-panel" data-panel="artists" hidden>
+                <li class="curation-group">Musicians</li>
+                <li>Sung-jin Cho</li>
+                <li>Yang Yin-mo</li>
+                <li>Ryuichi Sakamoto</li>
+                <li>Hans Zimmer</li>
+                <li class="curation-group">Visual artists</li>
+                <li>Georgia O&rsquo;Keeffe</li>
+                <li>Marc Chagall</li>
+                <li>Pierre Huyghe</li>
+                <li>Kim Tschang-yeul</li>
+            </ul>
+            <ul class="curation-panel" data-panel="perfumes" hidden>
+                <li><a href="https://eu.liquidesimaginaires.com/products/blanche-bete" target="_blank" rel="noreferrer">Blanche B&ecirc;te &mdash; Liquide Imaginaire</a></li>
+                <li><a href="https://www.franciskurkdjian.com/eu-en/p/baccarat-rouge-540-eau-de-parfum-RA12232.html" target="_blank" rel="noreferrer">540 Baccarat Rouge &mdash; Maison Francis Kurkdjian</a></li>
+                <li><a href="https://www.franciskurkdjian.com/eu-en/p/724-eau-de-parfum-RA12352.html" target="_blank" rel="noreferrer">724 &mdash; Maison Francis Kurkdjian</a></li>
+                <li><a href="https://www.creedboutique.com/products/original-vetiver" target="_blank" rel="noreferrer">Original Vetiver &mdash; Creed</a></li>
+            </ul>
+        </section>
+
+        <section class="section bookclub-section" id="bookclub">
+            <a href="https://weekendbookclub.vercel.app/" target="_blank" rel="noreferrer" class="bookclub-card">
+                <span class="bookclub-emoji" aria-hidden="true">&#128218;</span>
+                <span class="bookclub-text">
+                    <span class="bookclub-head">Weekend Book Club</span>
+                    <span class="bookclub-desc">A little club I run with friends &mdash; we read, discuss, and yap. Come see what we're reading!</span>
+                </span>
+                <span class="bookclub-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+        </section>
+
+    </div>
+
+    <script src="js/about.js"></script>
+</body>
+</html>

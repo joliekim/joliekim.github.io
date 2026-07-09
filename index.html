@@ -4,17 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Heeji Jolie Kim - HCI Researcher at KAIST">
-    <title>heeji's portfolio</title>
-    <link rel="stylesheet" href="css/styles.css?v=terminal-2026-13">
+    <title>Heeji Jolie Kim</title>
+    <link rel="stylesheet" href="css/main.css?v=minimal-2026-3">
     <link rel="icon" type="image/x-icon" href="./image/favicon.jpg">
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
+    <div class="page">
+        <header class="site-header">
+            <div>
+                <h1><a href="./">Heeji Jolie Kim</a></h1>
+                <p class="role">HCI Researcher / Creative Tool Builder</p>
+                <p class="email"><a href="mailto:jolieheejikim@kaist.ac.kr">jolieheejikim@kaist.ac.kr</a></p>
+            </div>
+            <div class="header-icons">
+                <a href="https://linkedin.com/in/jolieheejikim" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+                </a>
+                <!-- <a href="https://github.com/joliekim" target="_blank" rel="noreferrer" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.207 11.387.6.113.82-.26.82-.577 0-.285-.01-1.04-.016-2.04-3.338.725-4.042-1.61-4.042-1.61-.546-1.386-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.605-2.665-.303-5.467-1.333-5.467-5.93 0-1.31.469-2.381 1.236-3.221-.124-.303-.536-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.29-1.552 3.297-1.23 3.297-1.23.655 1.652.243 2.873.12 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.604-.014 2.896-.014 3.288 0 .32.216.694.825.576C20.565 21.795 24 17.298 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a> -->
+            </div>
+        </header>
+
+        <figure class="camera-figure" id="camera">
+            <img src="./image/camera-pfp.png" alt="Heeji sitting at a table overlooking the KAIST duck pond, framed inside a Sony digital camera" class="camera-body">
+
+            <!-- live LCD screen: photo layer that can zoom + cycle -->
+            <div class="lcd" aria-hidden="true">
+                <div class="lcd-inner" id="lcd-inner">
+                    <img src="./image/lcd-balcony.jpg" alt="" id="lcd-photo">
+                </div>
+                <span class="lcd-osd" id="lcd-osd"></span>
+            </div>
+
+            <a href="./about.html" class="about-pill">about me <span aria-hidden="true">&#10022;</span></a>
+
+            <!-- camera controls (positions match the buttons in the photo) -->
+            <button type="button" class="cam-hotspot hs-w" id="btn-w" aria-label="Zoom out (W)"></button>
+            <button type="button" class="cam-hotspot hs-t" id="btn-t" aria-label="Zoom in (T)"></button>
+            <button type="button" class="cam-hotspot hs-shutter" id="btn-shutter" aria-label="Take a photo"></button>
+            <button type="button" class="cam-hotspot hs-menu" id="btn-menu" aria-label="Next photo"></button>
+
+            <div class="cam-flash" id="cam-flash" aria-hidden="true"></div>
+        </figure>
+
+        <div class="film-tray" id="film-tray" aria-live="polite"></div>
+
+        <p class="camera-hint"><span>W/T</span> zooms &middot; <span>MENU</span> flips photos &middot; the round button snaps &#10022;</p>
+
+        <section class="bio">
+            <p>I&rsquo;m an HCI researcher and an incoming PhD student in Industrial Design at KAIST, exploring physical&ndash;digital interaction in <a href="https://make.kaist.ac.kr/" target="_blank" rel="noreferrer">Make Lab</a> under Prof. Andrea Bianchi.</p>
+            <p>My research focuses on <span class="rainbow"><span>c</span><span>r</span><span>e</span><span>a</span><span>t</span><span>i</span><span>v</span><span>i</span><span>t</span><span>y</span></span> support tools that help people direct intelligent augmentation throughout the creative process&mdash;designing interactive systems that scaffold creative cognition and make ideas and visual outputs steerable, manipulable, composable, and refinable.</p>
+            <p>Previously, I earned an MSc in Industrial Design at KAIST, and a B.S. in Culture &amp; Design Management at Yonsei University, where I worked on HRI research.</p>
+        </section>
+
+        <section class="section" id="publications">
+            <h2>Publications</h2>
+            <ul class="pub-list">
+                <li class="pub-item">
+                    <span class="pub-year">2026</span>
+                    <div class="pub-body">
+                        <p class="pub-title">AtoMix: Fostering Structured Visual Ideation for Remote Groups through Atomic Composition and Cross-Pollination</p>
+                        <p class="pub-authors"><strong>Heeji Jolie Kim</strong>, Anam Ahmad Khan, SeungHui Huh, Andrea Bianchi</p>
+                        <p class="pub-venue">C&amp;C &rsquo;26: Creativity and Cognition</p>
+                        <p class="pub-abstract">6-3-5 brainwriting is a structured group ideation method that produces many ideas quickly, but current generative tools struggle to support modular, visual, and collaborative idea development. AtoMix addresses this by enabling atomic prompting, reusable visual elements, and collaborative composition, resulting in more effective and fine-grained visual ideation compared to existing approaches.</p>
+                        <p class="pub-links">
+                            <!-- TODO: replace # with real links -->
+                            <a href="#">PDF</a>
+                            <a href="https://doi.org/10.1145/3803784.3807530">DOI</a>
+                        </p>
+                    </div>
+                </li>
+                <li class="pub-item">
+                    <span class="pub-year">2024</span>
+                    <div class="pub-body">
+                        <p class="pub-title">Investigating Work Companion Robot Interactions to Enhance Work-from-Home Productivity and Experience</p>
+                        <p class="pub-authors"><strong>Heeji Kim</strong>, Bokyung Lee</p>
+                        <p class="pub-venue">Archives of Design Research &mdash; AoDR Vol. 37, No. 4</p>
+                        <p class="pub-abstract">This study examines how a tabletop robot companion influences knowledge-worker productivity in work-from-home contexts. By evaluating Roby in real-world settings, the paper identifies factors that can inform future intelligent robot companions for remote work.</p>
+                        <p class="pub-links">
+                            <a href="https://aodr.org/xml/41676/41676.pdf">PDF</a>
+                            <a href="https://doi.org/10.15187/adr.2024.08.37.4.43">DOI</a>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="section" id="updates">
+            <h2>Updates</h2>
+            <ul class="update-list" id="update-list">
+                <li><span class="update-date">Jul 2026</span> Presenting my paper at C&amp;C 2026 in London</li>
+                <li><span class="update-date">Jun 2026</span> Flying to Stockholm for a Workshop at KTH Royal Institute of Technology</li>
+                <li><span class="update-date">Jun 2026</span> Successfully defended my Masters thesis!</li>
+                <li><span class="update-date">Jan 2026</span> Working as an Assistant to SC for CHI 2026</li>
+                <li><span class="update-date">Oct&ndash;Nov 2025</span> Research visit to KTH Royal Institute of Technology, Stockholm</li>
+                <li><span class="update-date">Sep 2025</span> Attending UIST 2025, Busan</li>
+                <li><span class="update-date">Apr 2025</span> Going to CHI 2025, Yokohama</li>
+                <li><span class="update-date">Oct 2024</span> Attending my first HCI conference, UIST 2024 in Pittsburgh</li>
+                <li><span class="update-date">Aug 2024</span> Summer school at Bauhaus-Universit&auml;t Weimar</li>
+                <li><span class="update-date">2019&ndash;2020</span> Exchange year in Durham, UK</li>
+                <li><span class="update-date">~2017</span> Korea &rarr; China &rarr; Canada &rarr; Korea</li>
+            </ul>
+            <div class="pagination" id="update-pagination"></div>
+        </section>
+    </div>
+
+    <!-- ============================================================
+         PREVIOUS TERMINAL-AESTHETIC VERSION (commented out for reference)
+         ============================================================
+
     <header class="site-header">
         <div class="identity-block">
             <h1 class="name"><a href="#about" class="nav-link active">HEEJI_JOLIE_KIM</a> <span class="node-dot" aria-hidden="true"></span></h1>
             <p>HCI RESEARCHER / CREATIVE TOOL BUILDER</p>
-            <p>36°22'25.3"N 127°21'43.4"E // KAIST</p>
+            <p>36&deg;22'25.3"N 127&deg;21'43.4"E // KAIST</p>
         </div>
 
         <nav class="top-nav" aria-label="Main navigation">
@@ -45,16 +150,16 @@
             <article class="system-window window-bio window-accent priority-window">
                 <div class="window-bar">
                     <span>C://BOOT/BIO/PRIMARY_IDENTITY</span>
-                    <span class="window-controls" aria-hidden="true">□ □ ×</span>
+                    <span class="window-controls" aria-hidden="true">&#9633; &#9633; &times;</span>
                 </div>
                 <div class="window-body bio-body">
                     <img src="./image/hero.jpg" alt="Heeji Jolie Kim" class="id-photo">
                     <div>
                         <span class="priority-tag">PRIMARY_NODE</span>
-                        <p>HCI researcher and MSc candidate in Industrial Design at KAIST, exploring physical–digital interaction in Make Lab under Prof. Andrea Bianchi.</p>
+                        <p>HCI researcher and MSc candidate in Industrial Design at KAIST, exploring physical&ndash;digital interaction in Make Lab under Prof. Andrea Bianchi.</p>
                         <div class="bio-extra" id="bio-extra">
                             <p>Building <strong>granular, controllable, composable interactions</strong> for creative human-AI workflows.</p>
-                            <p>My research is on <strong>creativity support tools</strong> — systems that let people steer computational augmentation at the level of their creative process, not just individual outputs.</p>
+                            <p>My research is on <strong>creativity support tools</strong> &mdash; systems that let people steer computational augmentation at the level of their creative process, not just individual outputs.</p>
                             <p>Before KAIST, I earned a B.S. in Culture &amp; Design Management at <a href="https://www.yonsei.ac.kr/" target="_blank" rel="noreferrer">Yonsei University</a>, working across AdTech and Blockchain, and founded an F&amp;B startup.</p>
                         </div>
                     </div>
@@ -68,11 +173,11 @@
             <article class="system-window window-research window-accent priority-window">
                 <div class="window-bar">
                     <span>C://RESEARCH/CREATIVE_INTERACTION_STACK</span>
-                    <span class="window-controls" aria-hidden="true">□ □ ×</span>
+                    <span class="window-controls" aria-hidden="true">&#9633; &#9633; &times;</span>
                 </div>
                 <div class="window-body">
                     <span class="priority-tag priority-tag-dark">PRIMARY_NODE</span>
-                    <p>Researching creativity support tools — how people steer computational augmentation across their creative process, not just its outputs.</p>
+                    <p>Researching creativity support tools &mdash; how people steer computational augmentation across their creative process, not just its outputs.</p>
                     <div class="meta-line">{ HCI, CREATIVITY_SUPPORT_TOOLS, CREATIVE_PROCESS, INTERACTION }</div>
                     <div class="window-footer">
                         <span>ACTIVE</span>
@@ -84,7 +189,7 @@
             <article class="system-window window-project window-dark support-window">
                 <div class="window-bar">
                     <span>C://WORKSPACE/PROJECT_INDEX</span>
-                    <span class="window-controls" aria-hidden="true">□ □ ×</span>
+                    <span class="window-controls" aria-hidden="true">&#9633; &#9633; &times;</span>
                 </div>
                 <div class="window-body">
                     <p>Selected builds, coursework systems, startup work, and Web3 leadership archived as project artifacts.</p>
@@ -99,7 +204,7 @@
             <article class="system-window window-status window-dark">
                 <div class="window-bar">
                     <span>C://STATUS</span>
-                    <span class="window-controls" aria-hidden="true">×</span>
+                    <span class="window-controls" aria-hidden="true">&times;</span>
                 </div>
                 <div class="status-body">
                     <strong>ONLINE</strong>
@@ -110,7 +215,7 @@
             <article class="system-window window-lab window-dark support-window">
                 <div class="window-bar">
                     <span>C://LAB/LIFE_LOG</span>
-                    <span class="window-controls" aria-hidden="true">□ □ ×</span>
+                    <span class="window-controls" aria-hidden="true">&#9633; &#9633; &times;</span>
                 </div>
                 <div class="window-body">
                     <p>Nomadic research life, curated books, films, artists, scents, and other field notes.</p>
@@ -126,7 +231,7 @@
 
     <footer class="footer">
         <div>
-            <p>©2026 ALL RIGHTS RESERVED</p>
+            <p>&copy;2026 ALL RIGHTS RESERVED</p>
             <p>SYSTEM_VERSION: PORTFOLIO.5.0.STABLE</p>
         </div>
         <p>DEV_BY: HEEJI_JOLIE_KIM</p>
@@ -137,5 +242,10 @@
     </footer>
 
     <script src="js/main.js?v=terminal-2026-13"></script>
+
+    (old stylesheet: css/styles.css / old script: js/main.js / old section pages: sections/)
+    ============================================================ -->
+
+    <script src="js/home.js?v=4"></script>
 </body>
 </html>
