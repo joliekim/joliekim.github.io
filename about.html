@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="About Heeji Jolie Kim - HCI Researcher at KAIST">
     <title>about me &mdash; Heeji Jolie Kim</title>
-    <link rel="stylesheet" href="css/main.css?v=minimal-2026-6">
+    <link rel="stylesheet" href="css/main.css?v=minimal-2026-8">
     <link rel="icon" type="image/x-icon" href="./image/favicon.jpg">
     <meta name="theme-color" content="#ffffff">
 </head>
@@ -14,10 +14,32 @@
         <a href="./" class="back-link">&larr; back</a>
 
         <h1 class="about-title">about me <button type="button" class="sparkle" id="sparkle" aria-label="click for a surprise">&#10022;</button></h1>
-
+<!-- 
         <figure class="photo-frame">
             <img src="./image/hero.png" alt="A collage of Heeji's everyday life" class="about-photo">
-        </figure>
+        </figure> -->
+
+        <section class="section gallery-section" id="gallery">
+            <h2>through my lens <span class="sparkle-mini" aria-hidden="true">&#10022;</span></h2>
+            <p class="gallery-tagline">A little sphere of moments I've collected. Drag to spin it, and tap a photo to see it &mdash; tap again for when &amp; where.</p>
+            <div class="photo-sphere" id="photo-sphere" role="list" aria-label="Photo collection you can rotate">
+                <div class="sphere-stage" id="sphere-stage"></div>
+                <p class="sphere-hint" id="sphere-hint">drag to spin &#8635;</p>
+            </div>
+        </section>
+
+        <!-- Lightbox: enlarged photo, tap toggles when/where -->
+        <div class="lightbox" id="lightbox" aria-hidden="true">
+            <button type="button" class="lightbox-close" id="lightbox-close" aria-label="close">&times;</button>
+            <figure class="lightbox-figure" id="lightbox-figure">
+                <img src="" alt="" class="lightbox-img" id="lightbox-img">
+                <figcaption class="lightbox-meta" id="lightbox-meta">
+                    <span class="meta-where" id="meta-where"></span>
+                    <span class="meta-when" id="meta-when"></span>
+                </figcaption>
+                <span class="lightbox-tip" id="lightbox-tip">tap photo for when &amp; where</span>
+            </figure>
+        </div>
 
         <section class="section notes-section" id="notes">
             <h2>off the clock <span class="sparkle-mini" aria-hidden="true">&#10022;</span></h2>
@@ -80,5 +102,7 @@
     </div>
 
     <script src="js/about.js"></script>
+    <script src="js/gallery-data.js"></script>
+    <script src="js/gallery.js"></script>
 </body>
 </html>

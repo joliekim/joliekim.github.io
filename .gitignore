@@ -1,1 +1,12 @@
 .claude
+
+# Original full-resolution gallery photos (~110MB, HEIC + big JPGs).
+# The site only uses the web-optimized copies in image/gallery/web and
+# image/gallery/full, which ARE committed. These originals stay local.
+# Delete these lines if you'd rather back up the originals in the repo too.
+image/gallery/*.JPG
+image/gallery/*.JPEG
+image/gallery/*.jpg
+image/gallery/*.jpeg
+image/gallery/*.HEIC
+image/gallery/*.heic

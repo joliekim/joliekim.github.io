@@ -13,6 +13,18 @@ html {
     -moz-osx-font-smoothing: grayscale;
 }
 
+/* ---------- Text selection ---------- */
+
+::selection {
+    background: #ff4d8d;
+    color: #ffffff;
+}
+
+::-moz-selection {
+    background: #ff4d8d;
+    color: #ffffff;
+}
+
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     background: #ffffff;
@@ -818,6 +830,209 @@ label {
     75% { transform: rotate(-6deg); }
 }
 
+/* ---------- Photo sphere gallery ---------- */
+
+.gallery-section h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.gallery-tagline {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 8px;
+    max-width: 460px;
+}
+
+.photo-sphere {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    aspect-ratio: 1 / 1;
+    margin: 4px auto 8px;
+    perspective: 900px;
+    cursor: grab;
+    touch-action: none;
+    -webkit-user-select: none;
+    user-select: none;
+    overflow: visible;
+}
+
+.photo-sphere.dragging {
+    cursor: grabbing;
+}
+
+.sphere-stage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+.sphere-tile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: #ffffff;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.18);
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    cursor: pointer;
+}
+
+.sphere-tile.ready {
+    opacity: 1;
+}
+
+.sphere-tile img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.sphere-tile:hover {
+    box-shadow: 0 0 0 2px #ff4d8d, 0 2px 10px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+}
+
+.sphere-hint {
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #999999;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.sphere-hint.hidden {
+    opacity: 0;
+}
+
+/* ---------- Lightbox ---------- */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.92);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.lightbox.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    font-size: 30px;
+    line-height: 1;
+    color: #111111;
+    background: none;
+    border: none;
+    padding: 4px;
+}
+
+.lightbox-figure {
+    position: relative;
+    max-width: 90vw;
+    max-height: 82vh;
+    margin: 0;
+    transform: scale(0.94);
+    transition: transform 0.28s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.lightbox.open .lightbox-figure {
+    transform: scale(1);
+}
+
+.lightbox-img {
+    display: block;
+    max-width: 90vw;
+    max-height: 82vh;
+    width: auto;
+    height: auto;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.lightbox-tip {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.45);
+    padding: 4px 12px;
+    border-radius: 999px;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.lightbox-meta {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 40px 18px 16px;
+    color: #ffffff;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+}
+
+.lightbox-figure.show-meta .lightbox-meta {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.lightbox-figure.show-meta .lightbox-tip {
+    opacity: 0;
+}
+
+.meta-where {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.meta-when {
+    font-size: 13px;
+    opacity: 0.85;
+}
+
 /* ---------- Responsive ---------- */
 
 @media (max-width: 480px) {
@@ -831,5 +1046,9 @@ label {
 
     .site-header .role {
         font-size: 15px;
+    }
+
+    .photo-sphere {
+        max-width: 320px;
     }
 }
