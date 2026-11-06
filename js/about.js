@@ -1,10 +1,10 @@
 // Edit these to change what the "fun fact" pill cycles through.
 const FUN_FACTS = [
-    "“Jolie” is from Angelina Jolie — my parents are fans \u{1F3AC}",
+    "my name “Jolie” is from Angelina Jolie — my parents are fans \u{1F3AC}",
     "quadrilingual: English, Korean, Chinese, and Japanese \u{1F5E3}️",
     "winter sports person; snowboarding and figure skating ⛷️",
-    "coffee flows in my blood... ☕",
-    "passed my master's defense this year \u{1F393}",
+    "i was regarded as someone who would least likely be in academia, but here I am \u{1F609}",
+    "my biggest spends recently have been on mechanical keyboards and perfume",
 ];
 
 let factIndex = 0;
