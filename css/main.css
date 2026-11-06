@@ -150,15 +150,16 @@ label {
     z-index: 0;
 }
 
-/* live photo layer aligned to the LCD in the camera image */
+/* live photo layer aligned to the LCD in the camera image
+   (screen photo area in camera-pfp.png, 830x472: x 89-570, y 64-427) */
 .lcd {
     position: absolute;
-    left: 12.41%;
-    top: 13.77%;
-    width: 56.14%;
-    height: 71.19%;
+    left: 10.72%;
+    top: 13.56%;
+    width: 57.95%;
+    height: 76.91%;
     overflow: hidden;
-    border-radius: 3px;
+    border-radius: 2px;
     z-index: 1;
 }
 
@@ -431,6 +432,88 @@ label {
 
 .pub-links a {
     color: #111111;
+}
+
+.pub-link-disabled {
+    color: #999999;
+    cursor: default;
+}
+
+.pub-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.pub-title a:hover {
+    text-decoration: underline;
+    text-decoration-color: #ff4d8d;
+    text-underline-offset: 3px;
+}
+
+/* ---------- Publication pages ---------- */
+
+.pub-page-venue {
+    font-size: 13px;
+    color: #999999;
+    margin-bottom: 10px;
+}
+
+.pub-page-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    margin-bottom: 14px;
+}
+
+.pub-page .pub-links {
+    margin-top: 12px;
+}
+
+.pub-video {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    margin: 32px 0 40px;
+    background: #f4f4f4;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.pub-video iframe,
+.pub-video video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.pub-video-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: #999999;
+}
+
+.pub-page-section h2 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.pub-page-section p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #333333;
+    margin-bottom: 12px;
+}
+
+.pub-keywords {
+    font-size: 13px;
+    color: #666666;
 }
 
 /* ---------- Updates ---------- */
@@ -1046,6 +1129,10 @@ label {
 
     .site-header .role {
         font-size: 15px;
+    }
+
+    .pub-page-title {
+        font-size: 21px;
     }
 
     .photo-sphere {
