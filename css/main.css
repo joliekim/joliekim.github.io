@@ -340,6 +340,30 @@ label {
     animation: wave-slide 0.45s linear infinite;
 }
 
+/* inline organisation logos in the bio */
+.org {
+    white-space: nowrap;
+}
+
+.org-logo {
+    height: 1.25em;
+    width: auto;
+    margin-right: 0.3em;
+    vertical-align: -0.3em;
+    border-radius: 50%;
+    transition: transform 0.4s cubic-bezier(0.2, 2.4, 0.35, 1);
+}
+
+.org:hover .org-logo {
+    transform: rotate(-12deg) scale(1.12);
+}
+
+.org-wordmark {
+    height: 0.8em;
+    width: auto;
+    vertical-align: -0.02em;
+}
+
 @keyframes wave-slide {
     from { background-position: 0 100%; }
     to { background-position: 20px 100%; }
